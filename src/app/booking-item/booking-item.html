@@ -1,1 +1,31 @@
-<p>booking-item works!</p>
+<div class="card booking-card my-4 mx-5 border-0 shadow-sm">
+  <div class="card-body p-4">
+    <div class="d-flex justify-content-between align-items-start gap-3">
+      <div class="me-3">
+        <h6 class="card-title mb-1 fw-bold">
+          {{ shoot().firstName }} {{ shoot().lasName }} | {{ shoot().type }}
+        </h6>
+        <p class="card-subtitle text-muted small mb-3">location: {{ shoot().locations }}</p>
+        <p class="card-text small mb-0">{{ shoot().date }}</p>
+        <p class="card-text small mb-0">
+          <span class="text-muted">Package:</span> {{ shoot().package }}
+        </p>
+      </div>
+
+      <div class="d-flex flex-column align-items-end gap-2">
+        @if (shoot().status === 'In Works') {
+          <span class="status-pill status-pill-in-progress">
+            <span class="status-dot"></span>
+            In Works
+          </span>
+        } @else {
+          <span class="status-pill status-pill-completed">
+            <span class="status-dot"></span>
+            Done
+          </span>
+        }
+        <button type="button" class="btn btn-outline-dark btn-sm px-3">Edit</button>
+      </div>
+    </div>
+  </div>
+</div>

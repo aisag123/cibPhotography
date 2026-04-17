@@ -1,0 +1,39 @@
+.booking-card {
+	border-radius: 1rem;
+}
+
+.status-pill {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+	padding: 0.3rem 0.75rem;
+	border-radius: 999px;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+}
+
+.status-pill-in-progress {
+	color: #8a5a00;
+	background-color: #fff3cd;
+	border: 1px solid #ffe69c;
+}
+
+.status-pill-completed {
+	color: #216948;
+	background-color: #d1e7dd;
+	border: 1px solid #a3cfbb;
+}
+
+.status-dot {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: #ffc107;
+	box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.2);
+}
+
+.status-pill-completed .status-dot {
+	background-color: #20b36e;
+	box-shadow: 0 0 0 3px rgba(25, 135, 84, 0.2);
+}

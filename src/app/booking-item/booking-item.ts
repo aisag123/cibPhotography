@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-
+import { Component, inject, input } from '@angular/core';
+import { ShootService } from '../shoot-service';
+import { ShootType } from '../models/shoot-type';
 @Component({
   selector: 'app-booking-item',
   imports: [],
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './booking-item.css',
 })
 export class BookingItem {
-
+shootService = inject(ShootService);
+shoot = input.required<ShootType>();
 }

@@ -1,2 +1,4 @@
 <p>bookingslist works!</p>
-@for (shoot of shootService.shoots(); track $index) {}
+@for (shoot of shootService.shoots(); track $index) {
+  <app-booking-item [shoot]="shoot"></app-booking-item>
+}
